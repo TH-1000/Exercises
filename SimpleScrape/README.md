@@ -1,5 +1,7 @@
 # Simplescrape
 
+**Credit/source: Instascrape! https://github.com/chris-greening/instascrape
+
 1. ## Introduction
 
    - What does it do:
