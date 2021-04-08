@@ -1,0 +1,59 @@
+2021-04-08 15:18:08,796 home_data Columns: Index(['Id', 'MSSubClass', 'MSZoning', 'LotFrontage', 'LotArea', 'Street',
+       'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig',
+       'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType',
+       'HouseStyle', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd',
+       'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrType',
+       'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual',
+       'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1',
+       'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating',
+       'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF',
+       'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath',
+       'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual',
+       'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'FireplaceQu', 'GarageType',
+       'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual',
+       'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF',
+       'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC',
+       'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType',
+       'SaleCondition', 'SalePrice'],
+      dtype='object')
+2021-04-08 15:18:08,796 Features Used: ['LotArea', 'YearBuilt', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
+2021-04-08 15:18:08,796 Initial Mean_Absolute_Error: 29652.931506849316
+2021-04-08 15:18:08,827 best tree size: 100
+2021-04-08 15:18:08,843 Lowest Mean_absolute_error: 16629.182745225255
+2021-04-08 15:18:09,244 Mean_absolute_error of RandomForest model: 21857.15912981083
+2021-04-08 15:18:09,244 --------------------END OF THIS TRIAL--------------------
+Added Feature: MSSubClass (Class of housing unit)
+2021-04-08 15:26:41,484 Features Used: ['MSSubClass', 'LotArea', 'YearBuilt', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
+2021-04-08 15:26:41,500 Initial Mean_Absolute_Error: 28685.301369863013
+2021-04-08 15:26:41,531 best tree size: 250
+2021-04-08 15:26:41,553 Lowest Mean_absolute_error: 10556.47806446896
+2021-04-08 15:26:41,969 Mean_absolute_error of RandomForest model: 21690.122630136986
+2021-04-08 15:26:41,969 --------------------END OF THIS TRIAL--------------------
+Added Features: OverallQual (Overall Quality), OverallCond (Overall Condition)
+2021-04-08 15:30:35,108 Features Used: ['MSSubClass', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
+2021-04-08 15:30:35,130 Initial Mean_Absolute_Error: 25899.986301369863
+2021-04-08 15:30:35,192 best tree size: 250
+2021-04-08 15:30:35,208 Lowest Mean_absolute_error: 9761.320793495875
+2021-04-08 15:30:35,778 Mean_absolute_error of RandomForest model: 18685.00976386171
+2021-04-08 15:30:35,778 --------------------END OF THIS TRIAL--------------------
+Added Feature: TotalBsmtSF (Total basement area), PoolArea
+2021-04-08 15:36:30,810 Features Used: ['MSSubClass', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', 'TotalBsmtSF', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd', 'PoolArea']
+2021-04-08 15:36:30,810 Initial Mean_Absolute_Error: 24657.11506849315
+2021-04-08 15:36:30,857 best tree size: 50
+2021-04-08 15:36:30,873 Lowest Mean_absolute_error: 19649.35583342773
+2021-04-08 15:36:31,374 Mean_absolute_error of RandomForest model: 18681.983684279192
+2021-04-08 15:36:31,374 --------------------END OF THIS TRIAL--------------------
+Removed Feature: PoolArea
+2021-04-08 15:39:37,402 Features Used: ['MSSubClass', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', 'TotalBsmtSF', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
+2021-04-08 15:39:37,424 Initial Mean_Absolute_Error: 26354.97808219178
+2021-04-08 15:39:37,471 best tree size: 50
+2021-04-08 15:39:37,471 Lowest Mean_absolute_error: 19649.35583342773
+2021-04-08 15:39:38,004 Mean_absolute_error of RandomForest model: 18625.638050880625
+2021-04-08 15:39:38,004 --------------------END OF THIS TRIAL--------------------
+Removed Feature: TotalBsmSF (Total basement area)
+2021-04-08 15:42:28,287 Features Used: ['MSSubClass', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
+2021-04-08 15:42:28,303 Initial Mean_Absolute_Error: 25899.986301369863
+2021-04-08 15:42:28,341 best tree size: 250
+2021-04-08 15:42:28,341 Lowest Mean_absolute_error: 9761.320793495875
+2021-04-08 15:42:28,820 Mean_absolute_error of RandomForest model: 18685.00976386171
+2021-04-08 15:42:28,820 --------------------END OF THIS TRIAL--------------------
