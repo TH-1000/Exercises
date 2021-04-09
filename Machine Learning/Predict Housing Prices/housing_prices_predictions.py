@@ -1,11 +1,13 @@
-import logging # print out logs to file
+# This is a beginner's approach(my personal first try) to machine learning. In this exercise I'm only considering numeric data.
+
+import logging  # print out logs to file
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 
 # Configure olog output
-logging.basicConfig(format= '%(asctime)s %(message)s', filename='housing_prices_predictions.log', level=logging.INFO)
+logging.basicConfig(format='%(asctime)s %(message)s', filename='housing_prices_predictions.log', level=logging.INFO)
 
 # Load dataset into Dataframe
 home_data = pd.read_csv(r'housing_prices_Iowa.csv')
@@ -17,7 +19,7 @@ home_data = pd.read_csv(r'housing_prices_Iowa.csv')
 y = home_data.SalePrice
 
 # set the features list X (Check log file housing_prices_predictions.txt for detailed log of feature testing)
-features = ['MSSubClass','LotArea', 'OverallQual', 'OverallCond','YearBuilt','1stFlrSF', '2ndFlrSF',
+features = ['MSSubClass', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', '1stFlrSF', '2ndFlrSF',
             'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
 logging.info(f'Features Used: {features}')
 X = home_data[features]
@@ -35,6 +37,7 @@ val_predictions = iowa_model.predict(val_X)
 val_mae = mean_absolute_error(val_predictions, val_y)
 logging.info(f'Initial Mean_Absolute_Error: {val_mae}')
 
+
 # Write a get_mae function to calculate the optimum max_leaf_nodes for the best mae
 def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
     model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
@@ -42,6 +45,7 @@ def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
     preds_value = model.predict(val_X)
     mae = mean_absolute_error(preds_value, val_y)
     return mae
+
 
 # Call the get_mae function on each value of max_leaf_nodes. Store the output in some way that allows you to select the
 # value of max_leaf_nodes that gives the most accurate model on your data.
@@ -64,7 +68,7 @@ logging.info(f'Lowest Mean_absolute_error: {mean_absolute_error(y, best_predict)
 from sklearn.ensemble import RandomForestRegressor
 
 # Define the model
-rf_model = RandomForestRegressor(random_state= 1)
+rf_model = RandomForestRegressor(random_state=1)
 
 # fit the data
 rf_model.fit(train_X, train_y)
@@ -75,5 +79,4 @@ rf_model_predictions = rf_model.predict(val_X)
 # get the mean absolute error of the new model
 rf_model_mae = mean_absolute_error(rf_model_predictions, val_y)
 logging.info(f'Mean_absolute_error of RandomForest model: {rf_model_mae}')
-logging.info('-'*20+'END OF THIS TRIAL'+'-'*20)
-
+logging.info('-' * 20 + 'END OF THIS TRIAL' + '-' * 20)
