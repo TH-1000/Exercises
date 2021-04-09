@@ -12,9 +12,6 @@ logging.basicConfig(format='%(asctime)s %(message)s', filename='housing_prices_p
 # Load dataset into Dataframe
 home_data = pd.read_csv(r'housing_prices_Iowa.csv')
 
-# Filter rows with missing values
-# home_data = home_data.dropna(axis=0) NOT NEEDED - clean dataset
-
 # Set target prediction (saleprice = y)  (get the exact name of columns first)
 y = home_data.SalePrice
 
